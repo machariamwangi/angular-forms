@@ -9,8 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor(private htpp:HttpClient) { }
+  getSubscriptionTypes(): Observable<string[]> {
+    return of(['Monthly', 'Annual', 'Lifetime']);
+  }
   postUserSettingsForm(UserSettings: UserSettings) :Observable<any>{
-    return this.htpp.post('url', UserSettings) 
+    return this.htpp.post('https://putsreq.com/0kaHDWoUVMtbDLdEqoEc', UserSettings) 
     // return of(UserSettings);
   }
 }
