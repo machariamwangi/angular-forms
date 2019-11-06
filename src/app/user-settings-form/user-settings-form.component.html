@@ -15,11 +15,14 @@
               Enter a name
             </div>
           </div>
-                  <button type="button" class="btn btn-primary"
-                        [(ngModel)]="singleModel" btnCheckbox
-                        btnCheckboxTrue="1" btnCheckboxFalse="0">
-                  Single Toggle
-                   </button>
+                 <div class="form-group">
+                   <label for="start-date"> Start Date</label>
+                   <input type="text"
+           placeholder="Start Date"
+           class="form-control" ([ngModel])="start-date" id="start-date"
+           bsDatepicker
+           [bsConfig]="{ isAnimated: true }">
+                 </div>
     
           <div class="form-check form-group">
             <input class="form-check-input" type="checkbox"
